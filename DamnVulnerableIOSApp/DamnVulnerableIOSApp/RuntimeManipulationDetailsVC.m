@@ -38,6 +38,9 @@
     self.urlToLoad = @"http://highaltitudehacks.com/2013/11/08/ios-application-security-part-21-arm-and-gdb-basics";
     [DamnVulnerableAppUtilities addCommonBackgroundImageToViewController:self];
 	// Do any additional setup after loading the view.
+    
+    self.didLogin = NO;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,12 +58,12 @@
 }
 
 -(IBAction)loginMethod2Tapped:(id)sender {
-    BOOL didLogin = NO;
+    //BOOL didLogin = NO;
     //Heeyy, you shouldn't be looking at the source code !!
     if(([self.usernameTextField.text isEqualToString:@"Admin"] && [self.passwordTextField.text isEqualToString:@"This!sA5Ecret"])){
-        didLogin = YES;
+        self.didLogin = YES;
     }
-    if(didLogin){
+    if(self.didLogin){
         [self pushSuccessPage];
     }else{
         [self showLoginFailureAlert];

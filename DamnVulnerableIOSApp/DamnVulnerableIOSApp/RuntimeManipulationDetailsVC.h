@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RuntimeManipulationDetailsVC : UIViewController
-
+    @property BOOL didLogin;
 @end
