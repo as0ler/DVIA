@@ -50,12 +50,12 @@
 }
 
 - (IBAction)sendOverHTTPTapped:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://google.com/"];
+    NSURL *url = [NSURL URLWithString:@"http://lmgtfy.com/?q=iphone+security"];
     [self sendRequestOverUrl:url];
 }
 
 - (IBAction)sendOverHTTPSTapped:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"https://google.com/"];
+    NSURL *url = [NSURL URLWithString:@"https://security.site.com"];
     [self sendRequestOverUrl:url];
 }
 
