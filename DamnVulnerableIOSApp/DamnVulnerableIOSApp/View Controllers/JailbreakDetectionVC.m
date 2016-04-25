@@ -49,7 +49,8 @@
 }
 
 - (IBAction)jailbreakTest2Tapped:(id)sender {
-    if (!TARGET_IPHONE_SIMULATOR){
+    //To work inside the iOS Simulator
+    //if (!TARGET_IPHONE_SIMULATOR){
     BOOL isJailbroken = NO;
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/Cydia.app"]){
         isJailbroken = YES;
@@ -61,17 +62,19 @@
         isJailbroken = YES;
     }else if([[NSFileManager defaultManager] fileExistsAtPath:@"/etc/apt"]){
         isJailbroken = YES;
+    }else if([[NSFileManager defaultManager] fileExistsAtPath:@"/bin/ls"]){
+        isJailbroken = YES;
     }
     
     NSError *error;
     NSString *stringToBeWritten = @"This is a test.";
-    [stringToBeWritten writeToFile:@"/private/jailbreak.txt" atomically:YES
+    [stringToBeWritten writeToFile:@"/etc/jailbreak.txt" atomically:YES
                           encoding:NSUTF8StringEncoding error:&error];
     if(error==nil){
         //Device is jailbroken
         isJailbroken = YES;
     } else {
-        [[NSFileManager defaultManager] removeItemAtPath:@"/private/jailbreak.txt" error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:@"/etc/jailbreak.txt" error:nil];
     }
     
     if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"cydia://package/com.example.package"]]){
@@ -80,16 +83,15 @@
     }
      [DamnVulnerableAppUtilities showAlertForJailbreakTestIsJailbroken:isJailbroken];
     
-    }else{
+  //  }else{
         //User is not testing on a device
-        [DamnVulnerableAppUtilities showAlertForJailbreakTestIsJailbroken:NO];
-    }
+  //      [DamnVulnerableAppUtilities showAlertForJailbreakTestIsJailbroken:NO];
+  //  }
 }
 
 
 -(BOOL)isJailbroken{
     
-#if !(TARGET_IPHONE_SIMULATOR)
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/Cydia.app"]){
         return YES;
@@ -118,7 +120,6 @@
         //Device is jailbroken
         return YES;
     }
-#endif
     
     //All checks have failed. Most probably, the device is not jailbroken
     return NO;

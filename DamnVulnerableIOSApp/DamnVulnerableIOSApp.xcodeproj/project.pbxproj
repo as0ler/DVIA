@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3D14151CCE8EFB007CD2BB /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 0D3D14141CCE8EFB007CD2BB /* Frameworks */; };
 		6E033F5518B1D5E7006F8DAB /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E033F4C18B1D5E7006F8DAB /* menuIcon.png */; };
 		6E033F5618B1D5E7006F8DAB /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E033F4C18B1D5E7006F8DAB /* menuIcon.png */; };
 		6E033F5718B1D5E7006F8DAB /* menuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E033F4D18B1D5E7006F8DAB /* menuIcon@2x.png */; };
@@ -306,6 +307,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D3D14141CCE8EFB007CD2BB /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+		0D3D14161CCE8F05007CD2BB /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = FridaGadget.dylib; path = DamnVulnerableIOSApp/Frameworks/FridaGadget.dylib; sourceTree = "<group>"; };
 		6E033F4C18B1D5E7006F8DAB /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuIcon.png; path = Resources/menuIcon.png; sourceTree = "<group>"; };
 		6E033F4D18B1D5E7006F8DAB /* menuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menuIcon@2x.png"; path = "Resources/menuIcon@2x.png"; sourceTree = "<group>"; };
 		6E033F4E18B1D5E7006F8DAB /* 120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 120x120.png; path = Resources/120x120.png; sourceTree = "<group>"; };
@@ -1051,6 +1054,7 @@
 		6EFED8A21870848E00FEFCB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D3D14161CCE8F05007CD2BB /* FridaGadget.dylib */,
 				9F0F76E11AA07D2500FB300E /* libc++.dylib */,
 				9F0DEE871A87F6A500507260 /* Social.framework */,
 				9F0DEE851A87F67E00507260 /* libsqlite3.dylib */,
@@ -1077,6 +1081,7 @@
 			isa = PBXGroup;
 			children = (
 				9FACC83E1B0BA36D00C54F02 /* DamnVulnerableIOSApp.entitlements */,
+				0D3D14141CCE8EFB007CD2BB /* Frameworks */,
 				6EFED8B21870848E00FEFCB1 /* AppDelegate.h */,
 				6EFED8B31870848E00FEFCB1 /* AppDelegate.m */,
 				6E63B64D18A8FE0800B438A0 /* FBMissingSymbols.m */,
@@ -1842,6 +1847,7 @@
 				9FACC7BA1B0A518800C54F02 /* LICENSE.txt in Resources */,
 				9FACC7EA1B0A51D100C54F02 /* LICENSE.txt in Resources */,
 				6E9BA762188018B30016714B /* menu-icon.png in Resources */,
+				0D3D14151CCE8EFB007CD2BB /* Frameworks in Resources */,
 				6E033F5518B1D5E7006F8DAB /* menuIcon.png in Resources */,
 				6E37427B1874A18300843DD1 /* card-bg@2x.png in Resources */,
 				6E3742671873FBB000843DD1 /* main-bg@2x.png in Resources */,
@@ -2243,6 +2249,7 @@
 					"$(PROJECT_DIR)/Parse.framework/Versions/1.2.18",
 					"$(PROJECT_DIR)/DamnVulnerableIOSApp/Flurry",
 					"$(PROJECT_DIR)/DamnVulnerableIOSApp/GoogleAnalytics",
+					"$(PROJECT_DIR)/DamnVulnerableIOSApp/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highaltitudehacks.dvia.asoler;
@@ -2278,6 +2285,7 @@
 					"$(PROJECT_DIR)/Parse.framework/Versions/1.2.18",
 					"$(PROJECT_DIR)/DamnVulnerableIOSApp/Flurry",
 					"$(PROJECT_DIR)/DamnVulnerableIOSApp/GoogleAnalytics",
+					"$(PROJECT_DIR)/DamnVulnerableIOSApp/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.highaltitudehacks.dvia.asoler;
